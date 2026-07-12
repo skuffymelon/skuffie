@@ -1,0 +1,123 @@
+@keyframes introit
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes animfade 
+{
+    0%
+    {
+        opacity: 0.2;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0.2;
+    }
+}
+
+@keyframes rotateanim 
+{
+    0%
+    {
+        rotate: 0deg;
+    }
+    25%
+    {
+        rotate: -4deg;
+    }
+    75%
+    {
+        rotate: 4deg;
+    }
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body
+{
+    background: black;
+}
+
+.main
+{
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    animation: introit 1s;
+}
+
+.skuffielogoholder
+{
+    height: 25%;
+    background: linear-gradient(rgb(25,25,25),black);
+    display: flex;
+    justify-content: center;
+    font-family: 'Yuyu', sans-serif;
+}
+
+.skuffielogo .letter
+{
+    overflow: hidden;
+    color: white;
+    opacity: 0.2;
+    font-size: 15vh;
+    padding-right: 2.5vw;
+    padding-left: 2.5vw;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+    user-select: none;
+}
+
+.skuffielogo .letter:hover
+{
+    opacity: 1;
+    transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+    animation: rotateanim 3s infinite ease;
+}
+
+.skuffielogo
+{
+    overflow: hidden;
+    width: min-content;
+    height: min-content;
+    display: flex;
+}
+
+.skuffieabout
+{
+    font-family: "Playwrite NZ", cursive;
+    font-style: normal;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: white;
+    height: 75%;
+}
+
+.skuffieabout h1
+{
+    font-weight: 700;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.skuffieabout p
+{
+    font-weight: 200;
+    font-size: 15px;
+}
