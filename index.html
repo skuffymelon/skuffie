@@ -3,30 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>skuffy</title>
+    <title>skuffie</title>
     <link rel="stylesheet" href="indexstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&family=Yuyu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Yuyu&display=swap" rel="stylesheet">
     <script src="scriptindex.js"></script>
+    <link rel="shortcut icon" href="data/favicon.png" type="image/x-icon">
 </head>
 <body onload="loadtext()">
     <div class="main">
         <div class="skuffielogoholder">
             <div class="skuffielogo">
-                <div class="letter">s</div>
-                <div class="letter">k</div>
-                <div class="letter">u</div>
-                <div class="letter">f</div>
-                <div class="letter">f</div>
-                <div class="letter">i</div>
-                <div class="letter">e</div>
+                <div onclick="clickletter(document.getElementsByClassName('letter')[0])" class="letter">s</div>
+                <div onclick="clickletter(document.getElementsByClassName('letter')[1])" class="letter">k</div>
+                <div onclick="clickletter(document.getElementsByClassName('letter')[2])" class="letter">u</div>
+                <div onclick="clickletter(document.getElementsByClassName('letter')[3])" class="letter">f</div>
+                <div onclick="clickletter(document.getElementsByClassName('letter')[4])" class="letter">f</div>
+                <div onclick="clickletter(document.getElementsByClassName('letter')[5])" class="letter">i</div>
+                <div onclick="clickletter(document.getElementsByClassName('letter')[6])" class="letter">e</div>
             </div>
         </div>
         <div class="skuffieabout">
-            <!--<h1>haii im skuffy/ie (emma) :3</h1>
-            <p>meow meow nya nya mya mya bla bla</p>
-             -->
+            <h1>haii im skuffie :3</h1>
+            
+            <p></p>
+
+            <p>welcome to my portfolio/about site :3</br> im skuffy/skuffie, a person on the internet doing silly things, most of the time!</br></br>in my freetime i spend time coding passion projects and fun stuff:</p>
+            
+            <div class="projects">
+                <div id="scp" class="containercode" onclick="window.open('https://github.com/skuffymelon/SCP-CB-Speedrunning-Tool')">
+                    <div class="title">SCP-CB SPEEDRUN TOOL</div>
+                    <div class="context">USEFUL TOOL FOR THE GAME SCP - CONTAINMENT BREACH. COMES WITH A SEED CHECKER, CODE CONVERTER AND CHEAT MENU</div>
+                </div>
+
+                <div id="ytavc" class="containercode" onclick="window.open('https://github.com/skuffymelon/YT-AVC-GUI')">
+                    <div class="title">YT-AVC GUI</div>
+                    <div class="context">A PROGRAM THAT CONVERTS YOUTUBE LINKS TO AUDIO/VIDEO WITH BATCH DOWNLOADING</div>
+                </div>
+                
+            </div>
+
+            <div class="projects"> 
+                <!--<div id="github" class="containercode" onclick="window.open('https://github.com/skuffymelon')">
+                    <div class="title">GITHUB</div>
+                    <div class="context">MY GITHUB :3</div>
+                </div>-->
+            </div>
+
         </div>
     </div>
 </body>
