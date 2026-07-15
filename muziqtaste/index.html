@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my music taste</title>
+    <link rel="shortcut icon" href="/data/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Yuyu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="muziqtastestyle.css">
+    <link rel="stylesheet" href="/data/globalcss.css">
+    <script src="mtscript.js"></script>
+</head>
+<body onload="animsequence1();" style="background-color: black">
+    
+    <div class="dropdown">
+        <a href="#main" onmouseenter="onhoverplay();" class="droptext">\\ //</a>
+    </div>
+    <div class="intro">
+        <div class="rotintro">
+            <div class="imgholder"><img onmouseenter="onhoverplay();" src="/data/afxlogo.svg"></div>
+            
+            <div class="lettergroup">
+                <div class="letter">m</div>
+                <div class="letter">y</div>
+                <div class="letter"> </div>
+                <div class="letter">m</div>
+                <div class="letter">u</div>
+                <div class="letter">s</div>
+                <div class="letter">i</div>
+                <div class="letter">c</div>
+                <div class="letter"> </div>
+                <div class="letter">t</div>
+                <div class="letter">a</div>
+                <div class="letter">s</div>
+                <div class="letter">t</div>
+                <div class="letter">e</div>
+                <div class="letter"> </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="blurred"></div>
+
+    <div id="main" class="main">
+        <div class="obsessionsection">
+            <div class="gradientpage"></div>
+            <div onmouseleave="obleave();" onmouseenter="onhoverplay(); obenter();" onclick="window.open('https://www.youtube.com/playlist?list=OLAK5uy_ntBzHw4_UJ7Vv8u7oJGCKJkgYV5gh9rRw','_blank')" class="obsession">
+                <div class="title">MY CURRENT OBSESSION:</div>
+                <div class="gradient"></div>
+                <img src="https://f4.bcbits.com/img/a2618300680_16.jpg">
+                <div class="musictitle">
+                    <p id="album">ESPIRIT - 200% ELECTRONICA</p>
+                    <p id="fave">FAVOURITE: WARMPOP, YOU'RE IN LOVE, SEAL, SECRET</p>   
+                </div>
+            </div>
+            <div class="artistshow">
+                <p>\\ more artists i listen to down below //</p>
+            </div>
+        </div>
+        <div class="artists">
+            <h1>ARTISTS I LISTEN TO</h1>
+            <div class="artistscontainer">
+                <p>aphex twin</p>
+                <p>boards of canada</p>
+                <p>autechre</p>
+                <p>squarepusher</p>
+                <p>venetian snares</p>
+                <p>burial</p>
+                <p>four tet</p>
+                <p>kraftwerk</p>
+                <p>portishead</p>
+                <p>björk</p>
+                <p>radiohead</p>
+                <p>gorillaz</p>
+                <p>instupendo</p>
+                <p>c418</p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

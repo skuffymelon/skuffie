@@ -1,0 +1,93 @@
+@keyframes introit
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar
+{
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(black,rgb(35, 15, 35),black);
+    border-radius: 1vh;
+}
+
+.main
+{
+    height: 100vh;
+    width: 100vw;
+    animation: introit 1s;
+}
+
+.skuffielogoholder
+{
+    height: 25%;
+    background: linear-gradient(rgb(26, 0, 26),black);
+    display: flex;
+    justify-content: center;
+    font-family: 'Yuyu', sans-serif;
+}
+
+.skuffielogo .letter a
+{
+    text-decoration: none;
+    overflow: hidden;
+    color: white;
+    opacity: 0.2;
+    font-size: 15vh;
+    padding-right: 2.5vw;
+    padding-left: 2.5vw;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+    user-select: none;
+}
+
+.skuffielogo .letter a:hover
+{
+    opacity: 1;
+    transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+    animation: rotateanim 3s infinite ease;
+}
+
+.skuffielogo
+{
+    overflow: hidden;
+    width: min-content;
+    height: min-content;
+    display: flex;
+}
+
+.mymusic
+{
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.mymusic p
+{
+    font-family: 'Playwrite NZ', cursive;
+    color: white;
+    font-size: 8vh;
+    text-align: center;
+    margin: 2vh;
+}

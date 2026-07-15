@@ -11,10 +11,10 @@
     <script src="scriptindex.js"></script>
     <link rel="shortcut icon" href="data/favicon.png" type="image/x-icon">
 </head>
-<body onload="loadtext()">
+<body onload="loadtext();">
     <div class="main">
         <div class="skuffielogoholder">
-            <div class="skuffielogo">
+            <div class="skuffielogo" onmouseover="hoverbool = false;" onmouseleave="hoverbool = true; lettersparkle();">
                 <div onclick="clickletter(document.getElementsByClassName('letter')[0])" class="letter">s</div>
                 <div onclick="clickletter(document.getElementsByClassName('letter')[1])" class="letter">k</div>
                 <div onclick="clickletter(document.getElementsByClassName('letter')[2])" class="letter">u</div>
@@ -27,7 +27,7 @@
         <div class="skuffieabout">
             <h1>haii im skuffie :3</h1>
             
-            <p></p>
+            <p style="display: none;"></p>
 
             <p>welcome to my portfolio/about site :3</br> im skuffy/skuffie, a person on the internet doing silly things, most of the time!</br></br>in my freetime i spend time coding passion projects and fun stuff:</p>
             
@@ -41,16 +41,36 @@
                     <div class="title">YT-AVC GUI</div>
                     <div class="context">A PROGRAM THAT CONVERTS YOUTUBE LINKS TO AUDIO/VIDEO WITH BATCH DOWNLOADING</div>
                 </div>
-                
             </div>
 
-            <div class="projects"> 
-                <!--<div id="github" class="containercode" onclick="window.open('https://github.com/skuffymelon')">
+            <p>my github down below:</p>
+
+            <div id="gh" class="projects"> 
+                <div id="github" class="containercode" onclick="window.open('https://github.com/skuffymelon')">
                     <div class="title">GITHUB</div>
-                    <div class="context">MY GITHUB :3</div>
-                </div>-->
+                </div>
             </div>
 
+            <p>i also love making music and doing sound design :3</p>
+        
+            <a href="muziq/">visit the page for my trax n soundz</a>
+        
+            <p>i do some speedrunning too!</p>
+
+            <a href="https://www.speedrun.com/users/skuffymelon">my speedrun.com account :3</a>
+            
+            <p>i recreationally edit videos, photos, film videos and take photos aswell.</br>3d art is also i thing i especially love doing in my freetime!</p>
+            
+            <div style="display: flex;" class="acontainer">
+                <a href="gallery/">gallery</a> <a target="_blank" href="https://www.youtube.com/@skuffymelon">youtube</a>
+            </div>
+            
+            <div class="muziqtaste" onclick="window.open('muziqtaste/','_self')">
+                <div class="title">music i listen to daily :3</div>
+                <div class="subtitle">click on this box to check out what i listen to and what my current musical obsession is :3</div>
+            </div>
+
+            <p>i also ADORE astronomy, i love planets, galaxies, superclusters, quasars, black holes, everything!!!</br> i do astrophotography aswell, but i sadly don't get to do it alot 3:</p>
         </div>
     </div>
 </body>
