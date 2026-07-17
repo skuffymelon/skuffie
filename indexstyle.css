@@ -312,7 +312,7 @@ a:hover
     filter: blur(2px);
     cursor: pointer;
     user-select: none;
-    margin: 4vh 2vh 2vh 2vh;
+    margin: 2vh;
     border-radius: 2vh;
     background-size: cover;
     background-position: center;

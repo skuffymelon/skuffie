@@ -354,14 +354,14 @@ html
     margin: 5vh;
     opacity: 0;
     transition: 1s;
+    text-align: center;
 }
 
 .artists
 {
-    display: block;
     font-family: 'Space Mono', monospace;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     color: white;
 }
 
@@ -375,8 +375,164 @@ html
     background-color: rgba(255, 255, 255, 0.231);
     text-align: center;
 }
+
 .artistscontainer p
 {
     text-align: center;
     font-size: 3vh;
+}
+
+.artistscontainer .faveartist
+{
+    opacity: 0.8;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-width: 1px;
+    overflow: hidden;
+    border-radius: 2vh;
+    width: 50%;
+    aspect-ratio: 3 / 2;
+    margin: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+.artistscontainer .faveartist:hover
+{
+    opacity: 1;
+    cursor: pointer;
+    border-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.artistscontainer .faveartist .imgholder
+{
+    user-select: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 2vh;
+    width: 94%;
+    height: 94%;
+    filter: blur(3px);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+.artistscontainer .faveartist:hover .imgholder
+{
+    filter: blur(0);
+    width: 96%;
+    height: 96%;
+}
+
+.artistscontainer .faveartist .imgholder img
+{
+    filter: saturate(0%) contrast(110%);
+}
+
+.artistscontainer .faveartist .atitle
+{
+    user-select: none;
+    position:absolute;
+    width: 40%;
+    max-width: 500px;
+    text-align: center;
+    aspect-ratio: 3 / 2;
+    border-radius: 2vh;
+    transition: cubic-bezier(0, 1, 0, 1) 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /*background-color: rgba(255, 255, 255, 0.2);*/
+}
+
+.artistscontainer .faveartist:hover .atitle
+{
+    text-shadow: 0 0 6px black, 0 0 6px black, 0 0 6px black;
+    font-size: clamp(1rem, 3.6vh, 3rem);
+}
+
+.artistscontainer .faveartist .aplaylist
+{
+    display: none;
+    transition: cubic-bezier(0, 1, 0, 1) 0.5s;
+    background-color: rgba(0, 0, 0, 0.315);
+    position: absolute;
+    width: 50%;
+    max-width: 500px;
+    aspect-ratio: 3 / 2;
+    border-radius: 2vh;
+}
+
+.artistscontainer .arow 
+{
+    display: flex;
+    justify-content:center;
+}
+
+#aeimg
+{
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#vsimg
+{
+    justify-content: flex-end;
+    align-items: self-start;
+}
+
+#vsimg img
+{
+    margin-top: clamp(-3vh, -10vh, -50vh);
+}
+
+#spush
+{
+    text-wrap-style: pretty;
+}
+
+#craft
+{
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#craft img
+{
+    margin-top: clamp(-3vh, -10vh, -50vh);
+}
+
+#mynameisbjork
+{
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#mynameisbjork img
+{
+    margin-top: clamp(-7vh, -15vh, -50vh);
+}
+
+#gravityyyy
+{
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#reygeeouh
+{
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#reygeeouh img
+{
+    margin-top: clamp(-4vh, -15vh, -50vh);
 }

@@ -12,10 +12,14 @@ var xmas = new Audio(); xmas.volume = 0.76; xmas.src = "/data/soundz/xmasevet.mp
 
 var globalscroll = 0;
 
+var vh100;
+
 function animsequence1()
 {
     var letters = document.getElementsByClassName("letter");    
     
+    vh100 = document.body.offsetHeight / window.innerHeight; console.debug(vh100);
+
     xmas.play();
 
     for (let i = 0; i < letters.length; i++)
@@ -122,7 +126,7 @@ window.addEventListener("scroll", () => {
 
 function imfade() // intro music fade
 {
-    xmas.volume = Math.max(0.76 - (globalscroll * 2),0 );
+    xmas.volume = Math.max(0.76 - (globalscroll * (vh100*0.7)),0 );
 }
 
 function bhide()
@@ -131,8 +135,8 @@ function bhide()
 }
 
 function favefade()
-{
-    document.querySelector(".obsession").style.opacity = `${Math.max(Math.min((globalscroll * 4.5) - 1.5,1),0) + Math.max(Math.min(4 - (globalscroll * 7),0),-1)}`
+{ // `${Math.max(Math.min((globalscroll * vh100) - (vh100 - (vh100/4)),1),0) + Math.max(Math.min(4 - (globalscroll * 7),0),-1)}`
+    document.querySelector(".obsession").style.opacity = `${(Math.max(Math.min((globalscroll * vh100) - 0.8,1),0)+ Math.max(Math.min(1.7 - (globalscroll * vh100),0),-1))}`
 }
 
 var obhover = false;
@@ -158,7 +162,7 @@ function obenter()
 
 function warmvol()
 {
-    warm.volume = (Math.max(Math.min((globalscroll * 3) - 1,1),0) + Math.max(Math.min(4 - (globalscroll * 7),0),-1)) / 4;
+    warm.volume = (Math.max(Math.min((globalscroll * vh100) - 1,1),0)+ Math.max(Math.min(1.5 - (globalscroll * vh100),0),-1)) / 4;
 }
 
 function obleave()
