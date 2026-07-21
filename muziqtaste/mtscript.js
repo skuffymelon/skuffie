@@ -20,7 +20,7 @@ function animsequence1()
     
     vh100 = document.body.offsetHeight / window.innerHeight; console.debug(vh100);
 
-    //xmas.play();
+    xmas.play();
 
     for (let i = 0; i < letters.length; i++)
     {
