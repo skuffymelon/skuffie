@@ -20,7 +20,7 @@ function animsequence1()
     
     vh100 = document.body.offsetHeight / window.innerHeight; console.debug(vh100);
 
-    xmas.play();
+    //xmas.play();
 
     for (let i = 0; i < letters.length; i++)
     {
@@ -122,6 +122,7 @@ window.addEventListener("scroll", () => {
     bhide();
     favefade();
     warmvol();
+    hbscr();
 });
 
 function imfade() // intro music fade
@@ -181,6 +182,52 @@ function obleave()
 
     document.querySelector(".obsessionsection .gradientpage").style.opacity = "0";
 }
+
+function hbscr()
+{
+    document.querySelector(".homeicon").style.opacity = `${(Math.max(Math.min((globalscroll * vh100) - 0.8,1),0))}`
+}
+
 var tempvol = xmas.volume;
 window.onblur = function() {warm.pause(); tempvol = xmas.volume; xmas.volume = 0;}
 window.onfocus = function() {warm.play(); xmas.volume = tempvol;}
+
+function artistpl(artist)
+{
+    //messy code to probably fix owo
+    if (document.querySelector(`#${artist} .atitle`).style.display == "flex")
+    {
+        document.querySelector(`#${artist} .atitle`).style.opacity = "0";
+        document.querySelector(`#${artist} .aplaylist`).style.display = "flex";
+        setTimeout(() => {
+            document.querySelector(`#${artist} .aplaylist .title`).innerHTML = document.querySelector(`#${artist} .atitle .title`).getHTML().replace("<br>", "");
+            document.querySelector(`#${artist} .aplaylist`).style.opacity = "1";
+            document.querySelector(`#${artist} .atitle`).style.display = "none";
+        }, 500);
+    }
+    else if (document.querySelector(`#${artist} .atitle`).style.display == "")
+    {
+        document.querySelector(`#${artist} .atitle`).style.opacity = "0";
+        document.querySelector(`#${artist} .aplaylist`).style.display = "flex";
+        setTimeout(() => {
+            document.querySelector(`#${artist} .aplaylist .title`).innerHTML = document.querySelector(`#${artist} .atitle .title`).getHTML().replace("<br>", "");
+            document.querySelector(`#${artist} .aplaylist`).style.display = "flex";
+            document.querySelector(`#${artist} .aplaylist`).style.opacity = "1";
+            document.querySelector(`#${artist} .atitle`).style.display = "none";
+        }, 500);
+    }
+    else
+    {
+        document.querySelector(`#${artist} .aplaylist`).style.opacity = "0";
+        document.querySelector(`#${artist} .atitle`).style.display = "flex"; 
+        setTimeout(() => {
+            document.querySelector(`#${artist} .aplaylist`).style.display = "none";
+            document.querySelector(`#${artist} .atitle`).style.opacity = "1";           
+        }, 500);
+    }
+}
+
+function openyt(link)
+{
+    window.open(`https://www.youtube.com/watch?v=${link}`,"_blank");
+}
